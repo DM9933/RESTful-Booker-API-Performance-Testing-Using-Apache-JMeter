@@ -27,4 +27,4 @@ The RESTful Booker API was tested to assess its responsiveness, scalability, and
 ## Setup and Usage
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/restful-booker-api-performance.git
+   git clone https: https://github.com/DM9933/RESTful-Booker-API-Performance-Testing-Using-Apache-JMeter.git
