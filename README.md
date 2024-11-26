@@ -109,6 +109,11 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 - Identify the API's breaking point under extreme loads.
 - Plan for high-availability solutions.
 
+## Conclusions
+- The system performs well under **400 users**, with no errors and manageable response times.
+- At **800 users**, performance degradation is evident, with increased response times and the appearance of errors.
+- These results suggest that the system's capacity threshold lies somewhere between 400 and 800 users. Further optimization or resource scaling may be necessary to handle higher loads effectively.
+
 ## Prerequisites
 - **Apache JMeter** (v5.5 or above)
 - **Java** (v8 or above)
