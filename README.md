@@ -18,26 +18,33 @@ The API documentation, including details on endpoints like authentication, booki
 - **Authentication**:
    -  `POST /auth` (createToken)  
      ![Authentication Endpoint](path/to/auth-image.png)
+   -  `POST /auth` (createTokenResponse)  
      ![Authentication Endpoint](path/to/auth-image.png)
 
 - **Booking Operations**:
   - `POST /booking` (createBooking)  
     ![Create Booking Endpoint](path/to/create-booking-image.png)
+  - `POST /booking` (createBookingResponse) 
     ![Create Booking Endpoint](path/to/create-booking-image.png)
   - `GET /booking` (getBookingIds)  
     ![Get Booking IDs Endpoint](path/to/get-booking-ids-image.png)
+  - `GET /booking` (getBookingIdsResponse)
     ![Get Booking IDs Endpoint](path/to/get-booking-ids-image.png)
   - `GET /booking/:id` (getBooking)  
     ![Get Booking Endpoint](path/to/get-booking-image.png)
+  - `GET /booking/:id` (getBookingResponse) 
     ![Get Booking Endpoint](path/to/get-booking-image.png)
   - `PUT /booking/:id` (updateBookingByPut)  
     ![Update Booking Endpoint](path/to/update-booking-image.png)
+  - `PUT /booking/:id` (updateBookingByPutResponse)  
     ![Update Booking Endpoint](path/to/update-booking-image.png)
   - `PATCH /booking/:id` (partialUpdateBooking)  
     ![Partial Update Booking Endpoint](path/to/partial-update-booking-image.png)
+  - `PATCH /booking/:id` (partialUpdateBookingResponse)  
     ![Partial Update Booking Endpoint](path/to/partial-update-booking-image.png)
   - `DELETE /booking/:id` (deleteBooking)  
     ![Delete Booking Endpoint](path/to/delete-booking-image.png)
+  - `DELETE /booking/:id` (deleteBookingResponse)  
     ![Delete Booking Endpoint](path/to/delete-booking-image.png)
     
 - **Measured metrics:**
