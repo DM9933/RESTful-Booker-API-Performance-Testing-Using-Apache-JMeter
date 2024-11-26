@@ -162,7 +162,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 3. Add Thread Groups to simulate users.
 4. Add HTTP Samplers for each API endpoint.
 5. Configure Listeners for monitoring (e.g., Summary Report, Aggregate Report).
-#### Image: Test Plan Setup
+#### Test Plan Setup
 ![Test Plan Setup](Steps/Step1.gif)
 
 ### Step 2: Configure Thread Group
@@ -171,7 +171,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
    - Number of Threads (Users): 100, 200, 300...
    - Ramp-Up Period: 10 seconds.
    - Loop Count: 1.
-#### Image: Thread Group Configuration
+#### Thread Group Configuration
 ![Thread Group Configuration](Steps/Steps2.gif)
 
 ### Step 3: Add HTTP Requests
@@ -179,13 +179,13 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 2. Configure HTTP Request:
    - Server Name/IP: `restful-booker.herokuapp.com`
    - Path: Corresponding API endpoint (e.g., `/auth`, `/booking`).
-#### Image: HTTP Request Configuration
+#### HTTP Request Configuration
 ![HTTP Request Configuration](Steps/steps3.gif)
 
 ### Step 4: Add Listeners
 1. Right-click on Thread Group → Add → Listener → Summary Report.
 2. (Optional) Add more listeners like Aggregate Report, View Results Tree.
-#### Image: Listener Configuration
+#### Listener Configuration
 ![Listener Configuration](Steps/steps4.gif)
 
 ### Step 5: Load Test Execution
