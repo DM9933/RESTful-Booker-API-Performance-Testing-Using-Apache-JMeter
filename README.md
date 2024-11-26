@@ -15,7 +15,8 @@ The API documentation, including details on endpoints like authentication, booki
 - Simulated concurrent users from 100 to 800.
 - Assessed multiple endpoints:
 
-- **Authentication**: `POST /auth` (createToken)  
+- **Authentication**:
+-  `POST /auth` (createToken)  
   ![Authentication Endpoint](path/to/auth-image.png)
 
 - **Booking Operations**:
