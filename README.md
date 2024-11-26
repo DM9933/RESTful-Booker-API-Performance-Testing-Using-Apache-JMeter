@@ -3,9 +3,13 @@ This repository showcases performance testing of the RESTful Booker API using Ap
 ## Introduction
 The RESTful Booker API was tested to assess its responsiveness, scalability, and reliability under varying loads. The results identify bottlenecks and provide optimization recommendations.
 
-## API Documentation
-The API documentation, including details on endpoints like authentication, booking operations, and health checks, can be found [here](https://restful-booker.herokuapp.com).
+## Setup and Usage
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/DM9933/RESTful-Booker-API-Performance-Testing-Using-Apache-JMeter.git
 
+## API Documentation
+The API documentation, including details on endpoints like authentication, booking operations, and health checks, can be found [here](https://restful-booker.herokuapp.com/apidoc/index.html#api-Auth).
 
 ## Features
 - Simulated concurrent users from 100 to 800.
@@ -81,44 +85,79 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 | **800**   | 1280.42                     | 3550.00                 | 24500.00                   | 0.16%          |
 
 ## Errors
-
 #### Error Types:
 - **403 Forbidden Errors**: 75% of errors observed, primarily affecting `createToken` and `getBookingIds`.
 - **Connection Reset Errors**: Sporadic (25%), linked to backend resource exhaustion.
-
 #### Top Causes:
 - Backend resource bottlenecks, especially under heavy loads.
 - Inefficient token generation in the `createToken` endpoint.
 
 ## Recommendations
-
 ### 1. Optimize `createToken`
 - Review and optimize backend token generation logic.
 - Explore lightweight encryption or caching mechanisms for tokens.
-
 ### 2. Implement Load Balancing
 - Deploy load balancers to evenly distribute traffic across servers.
-
 ### 3. Improve Error Handling
 - Mitigate 403 Forbidden and Connection Reset errors through better server-side logic and retry mechanisms.
-
 ### 4. Scalability Enhancements
 - Increase server resources (CPU, memory, and bandwidth).
 - Employ autoscaling for dynamic user load handling.
-
 ### 5. Introduce Caching
 - Cache responses for static/semi-static endpoints like `getBookingIds` to reduce server strain.
-
 ### 6. Conduct Stress Testing
 - Identify the API's breaking point under extreme loads.
 - Plan for high-availability solutions.
 
-## Tools Used
+## Prerequisites
 - **Apache JMeter** (v5.5 or above)
 - **Java** (v8 or above)
+- **System with 4+ cores and 16GB RAM** (recommended)
 - **BlazeMeter Chrome Extension** (optional for generating JMX files)
+  
+## Installation
+### Step 1: Install Java
+1. Download and install Java from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
 
-## Setup and Usage
-1. Clone this repository:
+### Step 2: Install Apache JMeter
+1. Download JMeter binaries from the [official website](https://jmeter.apache.org/download_jmeter.cgi).
+2. Extract the `apache-jmeter-5.x.zip` file.
+
+## How to Run Performance Tests
+
+### Step 1: Set Up JMeter Test Plan
+1. Open Apache JMeter GUI.
+2. Create a new Test Plan.
+3. Add Thread Groups to simulate users.
+4. Add HTTP Samplers for each API endpoint.
+5. Configure Listeners for monitoring (e.g., Summary Report, Aggregate Report).
+
+### Step 2: Configure Thread Group
+1. Right-click on Test Plan → Add → Threads (Users) → Thread Group.
+2. Set parameters:
+   - Number of Threads (Users): 100, 200, 300...
+   - Ramp-Up Period: 10 seconds.
+   - Loop Count: 1.
+
+### Step 3: Add HTTP Requests
+1. Right-click on Thread Group → Add → Sampler → HTTP Request.
+2. Configure HTTP Request:
+   - Server Name/IP: `restful-booker.herokuapp.com`
+   - Path: Corresponding API endpoint (e.g., `/auth`, `/booking`).
+
+### Step 4: Add Listeners
+1. Right-click on Thread Group → Add → Listener → Summary Report.
+2. (Optional) Add more listeners like Aggregate Report, View Results Tree.
+
+### Step 5: Load Test Execution
+1. Save the test plan (e.g., `Restful_Booker_Test_Plan.jmx`).
+2. Run the test in GUI mode:
+   - Click the green **Start** button.
+   
+## Generating Reports
+### 1. Generate CSV Files:
    ```bash
-   git clone https://github.com/DM9933/RESTful-Booker-API-Performance-Testing-Using-Apache-JMeter.git
+   jmeter -n -t Restful_Booker_Test_Plan.jmx -l Results.csv
+### 2. Generate HTML Report:
+   ```bash
+   jmeter -g Results.jtl -o Report_Folder
