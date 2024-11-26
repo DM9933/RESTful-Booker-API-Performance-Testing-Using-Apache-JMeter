@@ -16,8 +16,6 @@ The API documentation, including details on endpoints like authentication, booki
 - Assessed multiple endpoints:
 ### Authentication
 - **CreateToken**: `POST /auth`
-
-- **Authentication**: `POST /auth` (createToken)
 - **Booking Operations**:
   - `POST /booking` (createBooking)
   - `GET /booking` (getBookingIds)
@@ -25,7 +23,7 @@ The API documentation, including details on endpoints like authentication, booki
   - `PUT /booking/:id` (updateBookingByPut)
   - `PATCH /booking/:id` (partialUpdateBooking)
   - `DELETE /booking/:id` (deleteBooking)
-- Measured metrics:
+- **Measured metrics:**
   - Application Performance Index (APDEX)
   - Response times (min, avg, max, 90th percentile)
   - Throughput (requests/sec)
@@ -78,11 +76,11 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 | deleteBooking         | 314.24                  | 4      | Consistent performance.                          |
 
 ### 4. Load Testing Result
-| **Users** | **Avg. Response Time (ms)** | **90th Percentile (ms)** | **Max Response Time (ms)** | **Error Rate** |
+| Users | Avg. Response Time (ms) | 90th Percentile (ms) | Max Response Time (ms) | Error Rate |
 |-----------|-----------------------------|--------------------------|----------------------------|----------------|
-| **100**   | 402.42                      | 1141.90                 | 1773.00                    | 0.00%          |
-| **400**   | 551.80                      | 1340.90                 | 9878.00                    | 0.00%          |
-| **800**   | 1280.42                     | 3550.00                 | 24500.00                   | 0.16%          |
+| 100   | 402.42                      | 1141.90                 | 1773.00                    | 0.00%          |
+| 400   | 551.80                      | 1340.90                 | 9878.00                    | 0.00%          |
+| 800   | 1280.42                     | 3550.00                 | 24500.00                   | 0.16%          |
 
 ## Errors
 #### Error Types:
@@ -113,6 +111,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 - The system performs well under **400 users**, with no errors and manageable response times.
 - At **800 users**, performance degradation is evident, with increased response times and the appearance of errors.
 - These results suggest that the system's capacity threshold lies somewhere between 400 and 800 users. Further optimization or resource scaling may be necessary to handle higher loads effectively.
+---
 
 ## Prerequisites
 - **Apache JMeter** (v5.5 or above)
@@ -123,19 +122,19 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 ## Installation
 ### Step 1: Install Java
 1. Download and install Java from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
-
 ### Step 2: Install Apache JMeter
 1. Download JMeter binaries from the [official website](https://jmeter.apache.org/download_jmeter.cgi).
 2. Extract the `apache-jmeter-5.x.zip` file.
 
 ## How to Run Performance Tests
-
 ### Step 1: Set Up JMeter Test Plan
 1. Open Apache JMeter GUI.
 2. Create a new Test Plan.
 3. Add Thread Groups to simulate users.
 4. Add HTTP Samplers for each API endpoint.
 5. Configure Listeners for monitoring (e.g., Summary Report, Aggregate Report).
+#### Image: Test Plan Setup
+![Test Plan Setup](path/to/your/image1.png)
 
 ### Step 2: Configure Thread Group
 1. Right-click on Test Plan → Add → Threads (Users) → Thread Group.
@@ -143,22 +142,28 @@ The **APDEX** score represents user satisfaction, calculated based on response t
    - Number of Threads (Users): 100, 200, 300...
    - Ramp-Up Period: 10 seconds.
    - Loop Count: 1.
+#### Image: Thread Group Configuration
+![Thread Group Configuration](path/to/your/image2.png)
 
 ### Step 3: Add HTTP Requests
 1. Right-click on Thread Group → Add → Sampler → HTTP Request.
 2. Configure HTTP Request:
    - Server Name/IP: `restful-booker.herokuapp.com`
    - Path: Corresponding API endpoint (e.g., `/auth`, `/booking`).
+#### Image: HTTP Request Configuration
+![HTTP Request Configuration](path/to/your/image3.png)
 
 ### Step 4: Add Listeners
 1. Right-click on Thread Group → Add → Listener → Summary Report.
 2. (Optional) Add more listeners like Aggregate Report, View Results Tree.
+#### Image: Listener Configuration
+![Listener Configuration](path/to/your/image4.png)
 
 ### Step 5: Load Test Execution
 1. Save the test plan (e.g., `Restful_Booker_Test_Plan.jmx`).
 2. Run the test in GUI mode:
    - Click the green **Start** button.
-   
+     
 ## Generating Reports
 ### 1. Generate CSV Files:
    ```bash
