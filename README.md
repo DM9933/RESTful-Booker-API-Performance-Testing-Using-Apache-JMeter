@@ -17,7 +17,7 @@ The API documentation, including details on endpoints like authentication, booki
 ### Authentication
 - **CreateToken**:
 - `POST /auth`
-- ![Authentication Endpoint](path/to/auth-image.png)
+  ![Authentication Endpoint](path/to/auth-image.png)
 - **Booking Operations**:
   - `POST /booking` (createBooking)  
     ![Create Booking Endpoint](path/to/create-booking-image.png)
