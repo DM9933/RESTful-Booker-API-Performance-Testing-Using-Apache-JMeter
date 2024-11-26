@@ -16,10 +16,8 @@ The API documentation, including details on endpoints like authentication, booki
 - Assessed multiple endpoints:
   
 **Authentication:**
-  - `POST /auth` (createToken) 
+  - `POST /auth` (createToken)
     ![Authentication Endpoint](path/to/auth-image.png)
-    - `POST /booking` (createBooking)  
-    ![Create Booking Endpoint](path/to/create-booking-image.png)
 **Booking Operations**:
   - `POST /booking` (createBooking)  
     ![Create Booking Endpoint](path/to/create-booking-image.png)
@@ -33,6 +31,7 @@ The API documentation, including details on endpoints like authentication, booki
     ![Partial Update Booking Endpoint](path/to/partial-update-booking-image.png)
   - `DELETE /booking/:id` (deleteBooking)  
     ![Delete Booking Endpoint](path/to/delete-booking-image.png)
+    
 - **Measured metrics:**
   - Application Performance Index (APDEX)
   - Response times (min, avg, max, 90th percentile)
