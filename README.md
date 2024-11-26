@@ -158,6 +158,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 ### 1. Generate CSV Files:
    ```bash
    jmeter -n -t Restful_Booker_Test_Plan.jmx -l Results.csv
+
 ### 2. Generate HTML Report:
    ```bash
    jmeter -g Results.jtl -o Report_Folder
