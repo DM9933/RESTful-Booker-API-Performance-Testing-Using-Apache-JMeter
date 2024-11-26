@@ -94,20 +94,20 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 **1. Optimize `createToken`**
 - Review and optimize backend token generation logic.
 - Explore lightweight encryption or caching mechanisms for tokens.
-- 
+  
 **2. Implement Load Balancing**
 - Deploy load balancers to evenly distribute traffic across servers.
-- 
+  
 **3. Improve Error Handling**
 - Mitigate 403 Forbidden and Connection Reset errors through better server-side logic and retry mechanisms.
-- 
+  
 **4. Scalability Enhancements**
 - Increase server resources (CPU, memory, and bandwidth).
 - Employ autoscaling for dynamic user load handling.
-- 
+  
 **5. Introduce Caching**
 - Cache responses for static/semi-static endpoints like `getBookingIds` to reduce server strain.
-- 
+  
 **6. Conduct Stress Testing**
 - Identify the API's breaking point under extreme loads.
 - Plan for high-availability solutions.
