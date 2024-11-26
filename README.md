@@ -17,13 +17,13 @@ The API documentation, including details on endpoints like authentication, booki
 
 - **Authentication**:
    -  `POST /auth` (createToken)  
-     ![Authentication Endpoint](path/to/auth-image.png)
+     ![Authentication Endpoint](Request and Response of API in Jmeter/createToken.jpg)
    -  `POST /auth` (createTokenResponse)  
      ![Authentication Endpoint](path/to/auth-image.png)
 
 - **Booking Operations**:
   - `POST /booking` (createBooking)  
-    ![Create Booking Endpoint](Request and Response of API in Jmeter/createToken.jpg)
+    ![Create Booking Endpoint]()
   - `POST /booking` (createBookingResponse) 
     ![Create Booking Endpoint](path/to/create-booking-image.png)
   - `GET /booking` (getBookingIds)  
