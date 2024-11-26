@@ -1,7 +1,6 @@
 # RESTful Booker API Performance Testing Using Apache JMeter
 
-This repository demonstrates how performance testing was conducted on the RESTful Booker API using Apache JMeter. The tests include scenarios like stress, spike, and endurance testing.
-
+This repository showcases performance testing of the RESTful Booker API using Apache JMeter. The goal was to evaluate responsiveness, scalability, and reliability under varying user loads using tests such as stress, spike, and endurance testing.
 ## Introduction
 
 The RESTful Booker API was tested to assess its responsiveness, scalability, and reliability under varying loads. The results identify bottlenecks and provide optimization recommendations.
