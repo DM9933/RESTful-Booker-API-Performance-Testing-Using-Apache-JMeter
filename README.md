@@ -17,7 +17,7 @@ The API documentation, including details on endpoints like authentication, booki
 
 - **Authentication**:
    -  `POST /auth` (createToken)  
-     ![Authentication Endpoint](Request and Response of API in Jmeter/createToken.jpg)
+     ![Authentication Endpoint](Request_and_Response_of_API_in_Jmeter/createToken.jpg)
    -  `POST /auth` (createTokenResponse)  
      ![Authentication Endpoint](path/to/auth-image.png)
 
