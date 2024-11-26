@@ -40,6 +40,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 | 600   | 0.777       | 0.029               | 0.267                 | ~0.995                 |
 | 700   | 0.841       | 0.029               | 0.729                 | ~0.991                 |
 | 800   | 0.830       | 0.025               | 0.685                 | ~0.989                 |
+
 **Observations**:
 - The `createToken` and `getBookingIds` endpoints experienced significant APDEX degradation at higher loads.
 - Other endpoints maintained high APDEX scores (~1.000).
@@ -55,6 +56,7 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 | 600   | 1209.65           | 3185.20         | 20163.00          | 0.33%      |
 | 700   | 1147.55           | 3179.70         | 22231.00          | 0.14%      |
 | 800   | 1280.42           | 3550.00         | 24500.00          | 0.16%      |
+
 **Observations**:
 - Response times increased steadily with user load, peaking at 1280 ms for 800 users.
 - Significant response time variability at 600+ users, especially for `createToken` and `getBookingIds`.
