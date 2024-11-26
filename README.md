@@ -202,3 +202,5 @@ The **APDEX** score represents user satisfaction, calculated based on response t
    ```bash
    jmeter -g Results.jtl -o Report_Folder
    ```
+## Reports
+![Description](https://imgur.com/a/YHK9j2Y)
