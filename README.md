@@ -23,7 +23,7 @@ The API documentation, including details on endpoints like authentication, booki
 
 - **Booking Operations**:
   - `POST /booking` (createBooking)  
-    ![Create Booking Endpoint](path/to/create-booking-image.png)
+    ![Create Booking Endpoint](Request and Response of API in Jmeter/createToken.jpg)
   - `POST /booking` (createBookingResponse) 
     ![Create Booking Endpoint](path/to/create-booking-image.png)
   - `GET /booking` (getBookingIds)  
