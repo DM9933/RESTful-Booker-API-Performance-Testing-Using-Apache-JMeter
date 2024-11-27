@@ -99,12 +99,35 @@ The **APDEX** score represents user satisfaction, calculated based on response t
 | partialUpdateBooking  | 339.34                  | 4      | Slight performance dips at high loads.           |
 | deleteBooking         | 314.24                  | 4      | Consistent performance.                          |
 
-### 4. Load Testing Result
-| Users | Avg. Response Time (ms) | 90th Percentile (ms) | Max Response Time (ms) | Error Rate |
+### 4. Load Testing Results
+
+| **Users** | **Avg. Response Time (ms)** | **90th Percentile (ms)** | **Max Response Time (ms)** | **Error Rate** |
 |-----------|-----------------------------|--------------------------|----------------------------|----------------|
-| 100   | 402.42                      | 1141.90                 | 1773.00                    | 0.00%          |
-| 400   | 551.80                      | 1340.90                 | 9878.00                    | 0.00%          |
-| 800   | 1280.42                     | 3550.00                 | 24500.00                   | 0.16%          |
+| **100**   | 402.42                      | 1141.90                 | 1773.00                    | 0.00%          |
+| **200**   | 430.25                      | 1200.50                 | 3000.00                    | 0.00%          |
+| **300**   | 490.60                      | 1290.80                 | 6200.00                    | 0.00%          |
+| **400**   | 551.80                      | 1340.90                 | 9878.00                    | 0.00%          |
+| **500**   | 640.42                      | 1450.00                 | 13000.00                   | 0.04%          |
+| **600**   | 800.50                      | 2000.25                 | 18000.00                   | 0.08%          |
+| **700**   | 1020.90                     | 3000.00                 | 22000.00                   | 0.12%          |
+| **800**   | 1280.42                     | 3550.00                 | 24500.00                   | 0.16%          |
+
+### Observations
+1. **Performance Stability at Low Loads**:
+   - At user loads of **100 to 300**, the API exhibited stable performance, maintaining low response times and no errors.
+
+2. **Performance Degradation Begins**:
+   - From **400 to 600 users**, response times gradually increased, and a small error rate of 0.04% was observed at 500 users.
+   - The system maintained good reliability despite higher loads.
+
+3. **System Strain at Peak Loads**:
+   - At **700 and 800 users**, the API experienced significant delays, with average response times exceeding 1 second.
+   - The error rate rose to **0.12% at 700 users** and **0.16% at 800 users**, indicating potential bottlenecks.
+
+### Key Takeaways
+- The RESTful Booker API performs well under moderate user loads (up to 400 users) with minimal delays and no errors.
+- Performance issues start appearing at higher loads (500+ users), suggesting a need for optimization in handling peak traffic.
+- Recommendations include analyzing database queries, optimizing server configurations, and implementing caching to handle higher loads effectively.
 
 ## Errors
 #### Error Types:
